@@ -6,7 +6,7 @@ class LanguageSchema extends Schema {
   up () {
     this.create('languages', (table) => {
       table.increments()
-      table.string('language', 80).notNullable()
+      table.string('language', 254)
       table.timestamps()
     })
   }

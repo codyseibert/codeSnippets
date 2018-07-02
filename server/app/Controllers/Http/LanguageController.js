@@ -1,7 +1,7 @@
 'use strict'
 
 class LanguageController {
-  async languages ({ request }) {
+  async index ({ request }) {
     const { language, count } = request.all()
     const languages = await Language.create({
       language,
