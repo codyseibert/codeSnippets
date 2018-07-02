@@ -12,6 +12,7 @@
 
 const Factory = use('Factory')
 const Database = use('Database')
+const Snippet = use('App/Models/Snippet');
 
 class SnippetSeeder {
   async run () {

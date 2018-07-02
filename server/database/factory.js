@@ -20,7 +20,8 @@ Factory.blueprint('App/Models/Language', (faker) => {
 })
 Factory.blueprint('App/Models/Snippet', (faker) => {
   return {
-    code: faker.string({ length: 225, pool: 'vueadonis' })
+    code: faker.string({ length: 225, pool: 'vueadonis' }),
+    languageId: faker.integer({ min: 1, max: 5 })
   }
 })
 /**
