@@ -3,10 +3,7 @@
 class LanguageController {
   async index ({ request }) {
     const { language, count } = request.all()
-    const languages = await Language.create({
-      language,
-      count
-    })
+    const languages = await Language.all()
     return languages
   }
 }

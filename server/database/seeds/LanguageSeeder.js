@@ -17,7 +17,7 @@ class LanguageSeeder {
   async run () {
     const languages = await Database.table('languages')
     console.log(languages)
+    Factory.model('App/Models/Language').createMany(5)
   }
 }
-
 module.exports = LanguageSeeder

@@ -17,6 +17,7 @@ class SnippetSeeder {
   async run () {
     const snippets = await Database.table('snippets')
     console.log(snippets)
+    Factory.model('App/Models/Snippet').createMany(5)
   }
 }
 

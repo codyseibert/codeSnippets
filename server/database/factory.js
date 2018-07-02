@@ -11,8 +11,18 @@
 |
 */
 
-// const Factory = use('Factory')
+const Factory = use('Factory')
 
+Factory.blueprint('App/Models/Language', (faker) => {
+  return {
+    language: faker.string({ length: 25, pool: 'vueadonis' })
+  }
+})
+Factory.blueprint('App/Models/Snippet', (faker) => {
+  return {
+    code: faker.string({ length: 225, pool: 'vueadonis' })
+  }
+})
 /**
   Factory.blueprint('App/Models/User', (faker) => {
     return {
