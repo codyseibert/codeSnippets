@@ -1,10 +1,13 @@
 'use strict'
 
 class LanguageController {
-  async index ({ request }) {
-    const { language, count } = request.all()
+  async index () {
     const languages = await Language.all()
-    return languages
+    const count = await Snippet.count(Snippet.where('languageId', 'id'))
+    console.log('aaa')
+    return {
+      languages, count
+    }
   }
 }
 
