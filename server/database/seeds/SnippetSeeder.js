@@ -11,13 +11,10 @@
 */
 
 const Factory = use('Factory')
-const Database = use('Database')
 const Snippet = use('App/Models/Snippet');
 
 class SnippetSeeder {
   async run () {
-    const snippets = await Database.table('snippets')
-    console.log(snippets)
     Factory.model('App/Models/Snippet').createMany(5)
   }
 }

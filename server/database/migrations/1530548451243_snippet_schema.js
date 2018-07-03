@@ -6,7 +6,7 @@ class SnippetSchema extends Schema {
   up () {
     this.create('snippets', (table) => {
       table.increments()
-      table.string('code', 255)
+      table.text('code')
       table.integer('languageId').unsigned().references('id').inTable('languages')
       table.timestamps()
     })

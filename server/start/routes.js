@@ -19,5 +19,6 @@ Route.group(() => {
   Route.post('auth/register', 'UserController.register')
   Route.post('auth/login', 'UserController.login')
   Route.get('languages', 'LanguageController.index')
+  Route.get('snippets', 'SnippetController.index')
 })
   .prefix('api/v1')

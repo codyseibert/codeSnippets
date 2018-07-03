@@ -4,7 +4,7 @@ const Model = use('Model')
 
 class Language extends Model {
   snippets () {
-    return this.hasMany('App/Models/Snippet')
+    return this.hasMany('App/Models/Snippet', 'id', 'languageId')
   }
 }
 

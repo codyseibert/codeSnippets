@@ -1,12 +1,13 @@
 'use strict'
 
+const Language = use('App/Models/Language');
+
 class LanguageController {
   async index () {
-    const languages = await Language
+    return await Language
       .query()
       .withCount('snippets')
       .fetch()
-    return languages.toJSON()
   }
 }
 
